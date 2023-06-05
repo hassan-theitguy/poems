@@ -1,0 +1,10 @@
+---
+pagination:
+    data: poems
+    size: 1
+    alias: poems
+permalink: "poems/{{ poems.title | slugify }}/"
+---
+
+{{ poems.title }}
+{{ poems.lines }}
