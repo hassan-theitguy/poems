@@ -1,4 +1,5 @@
 ---
+layout: layout.njk
 pagination:
     data: poems
     size: 1
@@ -6,5 +7,9 @@ pagination:
 permalink: "poems/{{ poems.title | slugify }}/"
 ---
 
-{{ poems.title }}
-{{ poems.lines }}
+<h1>{{ poems.title }}</h1>
+{% for line in poems.lines %}
+{{ line }}<br>
+{% endfor %}
+<br>
+<a href="/">view all poems</a>
