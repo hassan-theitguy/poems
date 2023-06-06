@@ -7,9 +7,14 @@ pagination:
 permalink: "poems/{{ poems.title | slugify }}/"
 ---
 <br>
+<div data-pagefind-body>
 <h1>{{ poems.title }}</h1>
 {% for line in poems.lines %}
 {{ line }}<br>
 {% endfor %}
+</div>
+<div data-pagefind-ignore>
 <hr>
 <a href="{{ base_url }}">view all poems</a>
+</div>
+

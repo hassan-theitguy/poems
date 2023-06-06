@@ -6,6 +6,8 @@ fi
 
 npx @11ty/eleventy
 
+pagefind --source "../docs/poems" --glob "**/*.*"
+
 echo $NODE_ENV_POEMS
 echo $1
 
