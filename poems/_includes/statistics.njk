@@ -3,13 +3,21 @@ layout: layout.njk
 ---
 <br>
 <h1>Statistics</h1>
-Coming soon...<br>
-Total words<br>
-Total unique words<br>
-Total poems<br>
-Average words per poem<br>
-Top 10 used words<br>
-Longest words<br>
-Longest poem
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for key, value in statistics %}
+    <tr>
+      <td>{{ key }}</td>
+      <td>{{ value | safe }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 <hr>
 <a href="{{ base_url }}">view all poems</a>
