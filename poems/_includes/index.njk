@@ -1,8 +1,10 @@
 ---
 layout: layout.njk
 ---
+<br>
+<h3>Poems by Hassan Voyeau</h3>
 <ul>
   {% for poem in poems %}
-    <li><a href="https://hassan-theitguy.github.io/poems/poems/{{ poem.title | slugify }}">{{ poem.title }}</a></li>
+    <li><a href="{{ base_url }}poems/{{ poem.title | slugify }}">{{ poem.title }}</a></li>
   {% endfor %}
 </ul>
